@@ -1,0 +1,113 @@
+.board .members {
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: calc((100% - (31% * 3)) / 3);
+  row-gap: 60px;
+}
+.board .members .member-card {
+  width: 31%;
+  max-width: 350px;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  position: relative;
+}
+.board .members .member-card:after {
+  content: "";
+  position: absolute;
+  right: 50%;
+  left: 0px;
+  bottom: 0px;
+  height: 18px;
+  background-color: var(--identity-color);
+  clip-path: polygon(0 0, 95% 0, 100% 100%, 0 100%);
+}
+.board .members .member-card:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 50%;
+  bottom: -18px;
+  height: 19px;
+  background-color: var(--identity-color);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 5% 100%);
+}
+.board .members .member-card .caption {
+  color: var(--white-color);
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  z-index: 1;
+}
+
+.board .members .member-card .img-layer {
+  bottom: -5.5%;
+}
+
+.board .members .member-card .caption .board-read-more-btn {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.board .members .member-card:hover .caption .board-read-more-btn {
+  opacity: 1;
+}
+
+.board .members .member-card .layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.5) 20%,
+    rgba(0, 0, 0, 0.3) 40%,
+    rgba(0, 0, 0, 0.1) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+/* modal style */
+.board-modal {
+  --bs-modal-width: 1200px;
+}
+
+@media screen and (max-width: 991px) {
+  .board .members {
+    justify-content: space-between;
+    column-gap: 0px;
+  }
+  .board .members .member-card {
+    width: 48%;
+    aspect-ratio: 1/1.09;
+  }
+  .board .members .member-card .img-layer {
+    bottom: -5%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .board .members {
+    justify-content: space-between;
+  }
+  .board .members .member-card {
+    width: 48%;
+    aspect-ratio: 1/1.09;
+  }
+  .board .members .member-card .img-layer {
+    bottom: -5%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .board .members {
+    justify-content: center;
+  }
+  .board .members .member-card {
+    width: 90%;
+    aspect-ratio: 1/1.09;
+  }
+  .board .members .member-card .img-layer {
+    bottom: -4.9%;
+  }
+}

@@ -1,0 +1,12 @@
+.dropdown .btn:after {
+  display: none;
+}
+.dropdown .dropdown-item {
+  transition: all 0.3s ease-in-out;
+  color: var(--white-color);
+  border-radius: 8px;
+}
+.dropdown .dropdown-item:hover {
+  background-color: var(--white-color);
+  color: var(--black-color);
+}

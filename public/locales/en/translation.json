@@ -1,0 +1,9 @@
+{
+  "share":{
+    "high":"high",
+    "prevClosed":" prev closed",
+    "open":"open",
+    "low":"low",
+    "price":"price"
+  }
+}

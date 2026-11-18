@@ -1,0 +1,9 @@
+.contact-dropdown-menu .contact-dropdown-item:hover {
+  background-color: var(--identity-color) !important;
+  color: var(--white-color) !important;
+}
+.contact-dropdown-menu {
+  max-height: 200px;
+  overflow-y: scroll;
+  z-index: 0;
+}

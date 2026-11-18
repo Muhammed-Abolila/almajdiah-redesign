@@ -1,0 +1,22 @@
+.alert .close-alert {
+  position: absolute;
+  top: -7px;
+  right: 0;
+  z-index: 2;
+  padding: 1.25rem 1rem;
+  font-size: 21px;
+  cursor: pointer;
+}
+.alert-custom {
+  animation: slideIn 0.3s ease-out;
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,11 @@
+.custom-link{
+  font-size: 0.8165rem;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  transition: all 0.3s ease-in-out;
+  min-width: 100px;
+}
+.custom-link:hover {
+  background-color: var(--identity-color);
+  color: var(--black-color);
+}

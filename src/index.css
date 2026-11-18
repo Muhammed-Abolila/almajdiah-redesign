@@ -1,0 +1,244 @@
+@font-face {
+  font-family: "lama";
+  src: url("./assets/fonts/LamaSans-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "lama";
+  src: url("./assets/fonts/LamaSans-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+:root {
+  --identity-color: #cfaf7a;
+  --white-color: #fff;
+  --black-color: #181818;
+  --second-black-color: #2a3335;
+  --gray-color: #f7f7f7;
+  --border-color: #d9d9d9;
+  --text-color: #787878;
+  --success-color: #34c759;
+  --fail-color: #ff383c;
+  /* 1 38px → 80px between 390px–1200px */
+  --fs-1: clamp(2.375rem, calc(0.3444rem + 5.2083vw), 5rem);
+  /* 2 39px → 48px between 390px–1200px */
+  --fs-2: clamp(2.4375rem, calc(2.0069rem + 1.1111vw), 3rem);
+  /* 3 27px → 34px between 390px–1200px */
+  --fs-3: clamp(1.6875rem, calc(1.3819rem + 0.8642vw), 2.125rem);
+  /* 4 Fixed 24px */
+  --fs-4: 1.5rem;
+  /* 5 Fixed 20px */
+  --fs-5: 1.25rem;
+  /* 6 Fixed 15px */
+  --fs-6: 0.9375rem;
+}
+body {
+  font-family: "lama", sans-serif !important;
+  color: var(--black-color);
+}
+/* custom classes */
+.lama-font {
+  font-family: "lama", sans-serif;
+}
+.word-nowrap {
+  white-space: nowrap;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* font sizes  */
+.custom-fs-1 {
+  font-size: var(--fs-1) !important;
+}
+.custom-fs-2 {
+  font-size: var(--fs-2) !important;
+}
+.custom-fs-3 {
+  font-size: var(--fs-3) !important;
+}
+.custom-fs-4 {
+  font-size: var(--fs-4) !important;
+}
+.custom-fs-5 {
+  font-size: var(--fs-5) !important;
+}
+.custom-fs-6 {
+  font-size: var(--fs-6) !important;
+}
+
+/* global styles */
+.section-title {
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: var(--fs-3) !important;
+}
+.box-title {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  column-gap: 3rem;
+  row-gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.border-bottom {
+  border-bottom: 1px solid var(--border-color);
+}
+table tbody tr:nth-child(odd) {
+  background-color: var(--gray-color) !important;
+}
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  border: none;
+}
+.custom-nav-tabs li,
+.custom-nav-tabs li a {
+  color: #4a5565 !important;
+}
+.custom-nav-tabs li.active,
+.custom-nav-tabs li a.active {
+  position: relative;
+  color: var(--black-color) !important;
+}
+.custom-nav-tabs li.active:after,
+.custom-nav-tabs li a.active:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--black-color);
+}
+.space-between-sections {
+  margin-top: clamp(4rem, calc(0.6889rem + 10.4167vw), 6rem);
+  margin-bottom: clamp(1rem, calc(0.5rem + 2vw), 4rem);
+}
+
+.btn:focus,
+.btn:active,
+.btn {
+  border: none;
+  outline: none;
+}
+.rdrDateDisplay {
+  min-width: 500px;
+}
+.rdrMonthAndYearWrapper,
+.rdrMonths {
+  display: none;
+}
+.rdrDateDisplay:focus + .rdrMonthAndYearWrapper,
+.rdrDateDisplay:focus + .rdrMonths {
+  display: block;
+}
+.form-control:focus {
+  box-shadow: none;
+  border-color: #dee2e6;
+}
+/* range date picker  */
+.react-datepicker-wrapper {
+  width: 220px;
+}
+.react-datepicker-wrapper .react-datepicker__input-container {
+  width: 100%;
+}
+.react-datepicker-wrapper .react-datepicker__input-container input {
+  background-color: var(--black-color);
+  color: var(--white-color);
+  width: 100%;
+  border: none;
+  padding: 7px 10px;
+  border-radius: 50px;
+  text-align: center;
+}
+.react-datepicker-wrapper
+  .react-datepicker__input-container
+  input:focus-visible {
+  border: none;
+  outline: none;
+}
+.react-datepicker-wrapper
+  .react-datepicker__input-container
+  .react-datepicker__close-icon:after {
+  display: none;
+}
+
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+
+  .print-table-wrapper,
+  .print-table-wrapper * {
+    visibility: visible !important;
+  }
+
+  .print-table-wrapper {
+    position: absolute !important;
+    left: 0 !important;
+    top: 10px !important;
+    right: 0 !important;
+    padding: 1rem !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+  }
+
+  table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    font-size: 10px !important;
+  }
+
+  table th,
+  table td {
+    border: 1px solid #ddd !important;
+    padding: 8px !important;
+    font-size: 10px !important;
+  }
+
+  table th {
+    background-color: #f2f2f2 !important;
+  }
+  .no-print {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  /* Optional: Prevent page breaks inside rows */
+  table tr {
+    page-break-inside: avoid !important;
+  }
+  /* Optional: Set direction if RTL */
+  html[lang="ar"] .print-table-wrapper {
+    direction: rtl !important;
+  }
+}
+
+.danger-html table {
+  width: 100% !important;
+}
+.danger-html .ckeCaption {
+  display: none;
+}
+.danger-html * {
+  font-family: "lama", sans-serif !important;
+}
+/* 
+bootstrap breakPoint
+X-Small	None	<576px
+Small	sm	≥576px
+Medium	md	≥768px
+Large	lg	≥992px
+Extra large	xl	≥1200px
+Extra extra large	xxl	≥1400px
+*/

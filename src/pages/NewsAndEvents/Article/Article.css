@@ -1,0 +1,13 @@
+/* .article-details img:not(a img) {
+  width: 100% !important;
+  aspect-ratio: 1/0.8;
+  max-height: 500px !important;
+  margin-block-end: 2rem;
+} */
+[dir="rtl"] .breadcrumb-item + .breadcrumb-item::before {
+  float: right;
+  padding-left: 0.5rem;
+}
+.dangrous-html p{
+  margin: 10px !important;
+}

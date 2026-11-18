@@ -1,0 +1,45 @@
+.swiper:before {
+  content: "";
+  position: absolute;
+  top: 100px;
+  z-index: -1;
+  left: 20px;
+  right:20px;
+  height: 2px;
+  background-color: var(--gray-color);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: none !important;
+}
+.milestons-navigation-buttons .prev-arrow,
+.milestons-navigation-buttons .next-arrow {
+  position: absolute;
+  color: var(--second-black-color);
+  top: 78px;
+  z-index: 9;
+}
+
+[dir="rtl"] .milestons-navigation-buttons .prev-arrow {
+  right: 8px;
+}
+[dir="rtl"] .milestons-navigation-buttons .next-arrow {
+  left: 4px;
+}
+[dir="ltr"] .milestons-navigation-buttons .prev-arrow {
+  left: 4px;
+}
+[dir="ltr"] .milestons-navigation-buttons .next-arrow {
+  right: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .swiper:before {
+    top: 97px;
+  }
+  .milestons-navigation-buttons .prev-arrow,
+  .milestons-navigation-buttons .next-arrow {
+    top: 81px;
+  }
+}

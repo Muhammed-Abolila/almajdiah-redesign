@@ -1,0 +1,35 @@
+.accordion-table .accordion-item{
+    border: none;
+}
+.accordion-table table td,
+.accordion-table table th,
+.accordion-table table .accordion-button {
+  background-color: transparent;
+}
+.accordion-table button.accordion-button {
+  box-shadow: none;
+}
+.accordion-table button.accordion-button::after {
+  display: none;
+}
+
+.accordion-table button.accordion-button:before {
+  content: "+";
+  font-size: 14px;
+  color: #4a403a;
+  margin: 2px;
+}
+.accordion-table button.accordion-button,
+.accordion-table button.accordion-button:hover{
+    background-color: transparent !important;
+    color: var(--black-color) !important;
+}
+.accordion-table button.accordion-button:not(.collapsed):before {
+  content: "−";
+  color: #4a403a;
+  margin: 2px;
+}
+
+.accordion-table button.accordion-button:hover {
+  background-color: #e8e8e8;
+}
